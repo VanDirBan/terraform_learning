@@ -11,6 +11,8 @@ Thanks to
 %{ for x in names ~}
  ${x},
 %{ endfor ~}
+
+<h4>Ok Ok test</h4>
 </html>
 EOF
 
