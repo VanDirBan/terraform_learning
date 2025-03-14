@@ -3,12 +3,15 @@ provider "aws" {
 }
 
 
-module "vpc-dev" {
-  source = "../modules/aws_network"
-}
+# module "vpc-dev" {
+#   #   source = "../modules/aws_network"
+#   source = "git@github.com:VanDirBan/terraform-modules.git//aws_network"
+
+# }
 
 module "vpc-prod" {
-  source               = "../modules/aws_network"
+  #   source               = "../modules/aws_network"
+  source               = "git@github.com:VanDirBan/terraform-modules.git//aws_network"
   env                  = "prod"
   vpc_cidr             = "10.100.0.0/16"
   private_subnet_cidrs = ["10.100.1.0/24"]
